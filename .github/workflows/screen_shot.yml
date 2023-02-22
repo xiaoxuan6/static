@@ -1,0 +1,41 @@
+name: "截图保存"
+
+on:
+  repository_dispatch:
+    types:
+      - screen_shot
+
+env:
+  TZ: Asia/Shanghai
+  URL: ${{ github.event.client_payload.url }}
+  FILENAME: ${{ github.event.client_payload.filename }}
+  ELEMENT: ${{ github.event.client_payload.element }}
+  HEIGHT: ${{ github.event.client_payload.height }}
+  WIDTH: ${{ github.event.client_payload.width }}
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v1
+        with:
+          go-version: 1.18
+      - name: "run"
+        run: |
+          go env -w GO111MODULE=on
+          go env -w GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
+          go env | grep GOPROXY
+          go mod tidy
+          make run url=$URL filename=$FILENAME element=$ELEMENT height=$HEIGHT width=$WIDTH
+      - name: "Commit files"
+        run: |
+          git config --local user.email "1527736751@qq.com"
+          git config --local user.name "xiaoxuan6"
+          git add -A
+          git commit -m "upload image" || exit 0
+      - name: "Push changes"
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true
