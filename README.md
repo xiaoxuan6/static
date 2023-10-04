@@ -14,9 +14,9 @@
 本地地址：
 
 ```
-<link rel="stylesheet" href="https://ghproxy.com/https://raw.githubusercontent.com/xiaoxuan6/static/master/static/css/nprogress.css">
+<link rel="stylesheet" href="https://ghproxy.com/https://github.com/xiaoxuan6/static/blob/master/static/css/nprogress.css">
 
-<script src="https://ghproxy.com/https://raw.githubusercontent.com/xiaoxuan6/static/master/static/js/nprogress.js"></script>
+<script src="https://ghproxy.com/https://github.com/xiaoxuan6/static/blob/master/static/js/nprogress.js"></script>
 ```
 
 # notiflix js、css
@@ -24,7 +24,7 @@
 本地地址：
 
 ```
-<link rel="stylesheet" href="https://ghproxy.com/https://raw.githubusercontent.com/xiaoxuan6/static/master/static/css/notiflix-3.2.6.min.css">
+<link rel="stylesheet" href="https://ghproxy.com/https://github.com/xiaoxuan6/static/blob/master/static/css/notiflix-3.2.6.min.css">
 
-<script src="https://ghproxy.com/https://raw.githubusercontent.com/xiaoxuan6/static/master/static/js/notiflix-3.2.6.min.js"></script>
+<script src="https://ghproxy.com/https://github.com/xiaoxuan6/static/blob/master/static/js/notiflix-3.2.6.min.js"></script>
 ```
