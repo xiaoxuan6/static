@@ -1,6 +1,13 @@
 # static
 图床
 
+## 使用 jsDelivr 的 API 请求刷新缓存
+
+```
+https://purge.jsdelivr.net/gh/user/repo/static/images/202212102216435.jpg
+https://purge.jsdelivr.net/gh/user/repo@version/file.js
+```
+
 # nprogress js、css
 
 远程地址：
